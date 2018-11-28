@@ -1,0 +1,24 @@
+{
+    "name": "certainty-backend",
+    "version": "1.0.0",
+    "description": "This installation was tested on a Ubuntu 18.04.1 machine.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/papeldeorigami/certainty-backend.git"
+    },
+    "author": "",
+    "license": "SEE LICENSE IN README.md",
+    "bugs": {
+        "url": "https://github.com/papeldeorigami/certainty-backend/issues"
+    },
+    "homepage": "https://github.com/papeldeorigami/certainty-backend#readme",
+    "dependencies": {
+        "express": "^4.16.4",
+        "express-fileupload": "^1.0.0"
+    }
+}
