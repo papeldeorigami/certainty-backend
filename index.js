@@ -1,11 +1,14 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
-const fileUpload = require('express-fileupload');
 const express = require('express');
+var swStats = require('swagger-stats');
+const fileUpload = require('express-fileupload');
+
 const app = express();
 const port = parseInt(process.env.PORT, 10) || 3000;
 app.use(fileUpload());
+app.use(swStats.getMiddleware());
 
 const RECORDING_FILE = 'recording.wav';
 const TEMP_FILE = `/tmp/${RECORDING_FILE}`;
@@ -33,6 +36,6 @@ app.post('/classify', function (req, res, next) {
     });
 });
 
-app.listen(port, function () {
+app.listen(port, '0.0.0.0', function () {
     console.log(`app listening on port ${port}`)
 })

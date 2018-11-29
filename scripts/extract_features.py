@@ -7,15 +7,15 @@ import re
 import random
 
 # Constants
-AUDIOS_FOLDER = "../audios_projeto_IA369Y"
-OPENSMILE_FOLDER = "../opensmile-2.3.0"
+AUDIOS_FOLDER = "../../../audios_projeto_IA369Y"
+OPENSMILE_FOLDER = "../../../opensmile-2.3.0"
 OUTPUT_FOLDER = "./features"
 TRAINING_FOLDER = "treinamento"
 PREDICTION_FOLDER = "validacao"
 
-df_resp = pd.read_csv("../respostas.csv")
+df_resp = pd.read_csv("../../../respostas.csv")
 df_resp['p'] = map(lambda x: x.lower(), df_resp['Prontuário'])
-df_anon = pd.read_csv("../anonimo-prontuario.csv")
+df_anon = pd.read_csv("../../../anonimo-prontuario.csv")
 df_anon['p'] = map(lambda x: x.lower(), df_anon['prontuario'])
 p = re.compile(r'(I\d+)question(\d+)')
 
